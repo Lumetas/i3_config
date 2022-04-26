@@ -1,0 +1,41 @@
+from random import choice
+from string import ascii_uppercase
+
+rStr = ''.join(choice(ascii_uppercase) for i in range(12))
+rStr = rStr + '.png'
+import glob
+import os
+import pyautogui
+screen = pyautogui.screenshot('screenshot.png')
+print(screen)
+os.rename('screenshot.png', rStr)
+
+import ftplib
+host = str('ftp.hostingem.ru')
+ftp_user = str('gnioo_30568720')
+ftp_password = str('aboba228')
+
+print('Попытка соединения с FTP-сервером', host)
+#print('Login:', ftp_user)
+#print('Password:', ftp_password)
+ftp = ftplib.FTP(host, ftp_user, ftp_password)
+
+
+directory_list = ftp.nlst()
+#print(directory_list)
+file = str(rStr)
+file_to_upload = open(file, 'rb')
+ftp.storbinary('STOR ' + 'more.lumetas.ml/htdocs/screen/' + file, file_to_upload)
+print('Файл', file, 'успешно загружен')
+
+rStrR = 'http://more.lumetas.ml/screen/' + rStr
+f = open('link', 'w')
+f.write(rStrR)
+f.close()
+
+
+
+os.system("rm " + rStr)
+print('Удалено')
+os.system('xclip -sel clip link')
+print('Скопировано')

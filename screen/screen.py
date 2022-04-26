@@ -11,8 +11,8 @@ print(screen)
 os.rename('screenshot.png', rStr)
 
 import ftplib
-host = str('ftp.hostingem.ru')
-ftp_user = str('gnioo_30568720')
+host = str('ftp.host')
+ftp_user = str('stp.user')
 ftp_password = str('aboba228')
 
 print('Попытка соединения с FTP-сервером', host)
@@ -25,10 +25,11 @@ directory_list = ftp.nlst()
 #print(directory_list)
 file = str(rStr)
 file_to_upload = open(file, 'rb')
-ftp.storbinary('STOR ' + 'more.lumetas.ml/htdocs/screen/' + file, file_to_upload)
+ftp.storbinary('STOR ' + 'путь/относительно/папки/ftp/сервера/screen/' + file, file_to_upload)
 print('Файл', file, 'успешно загружен')
 
-rStrR = 'http://more.lumetas.ml/screen/' + rStr
+rStrR = 'http://domen.com/screen/' + rStr
+# шаблон ссылки
 f = open('link', 'w')
 f.write(rStrR)
 f.close()

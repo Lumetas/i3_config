@@ -185,7 +185,7 @@ client.placeholder		#4c566a #4c566a #011b28 #011b28
 
 
 #Скриншот
-bindsym $mod+p exec python3 /home/chris/screen.py
+bindsym $mod+p exec python3 ~/screen.py
 # обои
 exec_always feh --bg-fill /home/chris/bg1.jpg
 # Анимации, вертикальная синхронизация, прозрачность окон через compton

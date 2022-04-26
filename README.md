@@ -4,6 +4,12 @@ i3satus config dir - /etc/i3status.conf<br>
 packets: <br>
 <br>
 compton<br>
-scrot<br>
+python3<br>
+pip3{<br>
+ftplib<br>
+pyautogui<br>
+glob<br>
+}<br>
+xclip<br>
 lxappearance<br>
 Flameshot<br>

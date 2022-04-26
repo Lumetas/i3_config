@@ -6,3 +6,4 @@ packets: <br>
 compton<br>
 scrot<br>
 lxappearance<br>
+Flameshot<br>

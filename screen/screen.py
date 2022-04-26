@@ -12,8 +12,8 @@ os.rename('screenshot.png', rStr)
 
 import ftplib
 host = str('ftp.host')
-ftp_user = str('stp.user')
-ftp_password = str('aboba228')
+ftp_user = str('ftp.user')
+ftp_password = str('ftp.password')
 
 print('Попытка соединения с FTP-сервером', host)
 #print('Login:', ftp_user)

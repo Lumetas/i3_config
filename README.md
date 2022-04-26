@@ -1,5 +1,6 @@
-i3 config dir - .config/i3/config <br>
+i3 config dir - ~/.config/i3/config <br>
 i3satus config dir - /etc/i3status.conf<br>
+kitty config dir - ~/.config/kitty/kitty.conf
 <br>
 packets: <br>
 <br>

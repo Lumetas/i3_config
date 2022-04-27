@@ -1,3 +1,12 @@
+i3 config file note{
+
+Цвета dmenu 28 строка
+Конфигурация Бара 157-177 строки
+Обои 204 строка
+
+}
+
+
 i3 config dir - ~/.config/i3/config <br>
 i3satus config dir - /etc/i3status.conf<br>
 kitty config dir - ~/.config/kitty/kitty.conf

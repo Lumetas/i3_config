@@ -1,4 +1,4 @@
-setxkbmap -option 'ctrl:nocaps'
+exec_always setxkbmap -option 'ctrl:nocaps'
 
 set $mod Mod4
 

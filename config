@@ -217,6 +217,3 @@ exec_always setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle"
 #расширение для хрома lum
 exec_always lumExt
 focus_follows_mouse no
-
-exec_always fusermount -u ~/ftp.hostingem 
-exec_always curlftpfs ftp://gnioo_30568720:aboba228@ftp.hostingem.ru/ ~/ftp.hostingem/

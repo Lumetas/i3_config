@@ -1,13 +1,23 @@
+#grim, slop, xclip
 from random import choice
+import subprocess
+import os
 from string import ascii_uppercase
+
+def coordinates():
+    useless_cat_call = subprocess.run(["slop"], stdout=subprocess.PIPE, text=True)
+    return useless_cat_call.stdout.replace("\n","")
+
+coord = coordinates()
+
 
 rStr = ''.join(choice(ascii_uppercase) for i in range(12))
 rStr = rStr + '.png'
-import glob
-import os
-import pyautogui
-screen = pyautogui.screenshot('screenshot.png')
-print(screen)
+
+
+cord = coord.split('+')
+os.system('grim -g "' + cord[1] + ', ' + cord[2] + ' ' + cord[0] + '" screenshot.png')
+
 os.rename('screenshot.png', rStr)
 
 import ftplib
@@ -18,17 +28,17 @@ ftp_password = str('ftp.password')
 print('Попытка соединения с FTP-сервером', host)
 #print('Login:', ftp_user)
 #print('Password:', ftp_password)
-ftp = ftplib.FTP(host, ftp_user, ftp_password)
+ftp = ftplib.FTP('ftp.hostingem.ru', 'gnioo_30568720', 'aboba228')
 
 
 directory_list = ftp.nlst()
 #print(directory_list)
 file = str(rStr)
 file_to_upload = open(file, 'rb')
-ftp.storbinary('STOR ' + 'путь/относительно/папки/ftp/сервера/screen/' + file, file_to_upload)
+ftp.storbinary('STOR ' + 'more.lumetas.ml/htdocs/screen/' + file, file_to_upload)
 print('Файл', file, 'успешно загружен')
 
-rStrR = 'http://domen.com/screen/' + rStr
+rStrR = 'http://more.lumetas.ml/screen/' + rStr
 # шаблон ссылки
 f = open('link', 'w')
 f.write(rStrR)

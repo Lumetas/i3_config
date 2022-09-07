@@ -28,7 +28,7 @@ ftp_password = str('ftp.password')
 print('Попытка соединения с FTP-сервером', host)
 #print('Login:', ftp_user)
 #print('Password:', ftp_password)
-ftp = ftplib.FTP('ftp.hostingem.ru', 'gnioo_30568720', 'aboba228')
+ftp = ftplib.FTP('server', 'user', 'pass')
 
 
 directory_list = ftp.nlst()
